@@ -8,13 +8,13 @@ def main():
 
 	un = driver.find_element_by_name("txtUserId")
 	un.clear()
-	un.send_keys('16BCS7017')
+	un.send_keys('your password')
 	un.send_keys(Keys.RETURN)
 	time.sleep(5)
 
 	pw = driver.find_element_by_name('txtLoginPassword')
 	pw.clear()
-	pw.send_keys('AmaZ^1010')
+	pw.send_keys('your uid')
 	pw.send_keys(Keys.RETURN)
 
 	#Logged in successfully
