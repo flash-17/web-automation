@@ -8,27 +8,24 @@ def main():
 
 	un = driver.find_element_by_name("txtUserId")
 	un.clear()
-	un.send_keys('your UID')
-	un.send_keys(Keys.RETURN)
-	time.sleep(5)
+	un.send_keys('16BCS7017')
+	un_submit = driver.find_element_by_xpath('//*[@id="btnNext"]')
+	un_submit.click()
+	time.sleep(3)
 
 	pw = driver.find_element_by_name('txtLoginPassword')
 	pw.clear()
-	pw.send_keys('your PASSWORD')
-	pw.send_keys(Keys.RETURN)
+	pw.send_keys('AmaZ^1010')
+	pw_submit = driver.find_element_by_xpath('//*[@id="btnLogin"]')
+	pw_submit.click()
 
-	#Logged in successfully
-	sidebar = driver.find_element_by_xpath('//*[@id="slide-toggle1"]/a')
-	sidebar.click()
-	time.sleep(5)
+	time.sleep(3)
 
-	r0 = driver.find_element_by_xpath('//*[@id="menu-content"]/li[4]/a')
+	r0 = driver.find_element_by_xpath('//*[@id="slide-toggle1"]/a')
 	r0.click()
-	time.sleep(10)
-
-	# rl = driver.find_element_by_xpath('//*[@id="menu-content"]/li[11]/a')
-	# rl.click()
-	# time.sleep(10)
+	time.sleep(2)
+	r1 = driver.get('https://uims.cuchd.in/UIMS/frmStudentCourseWiseAttendanceSummary.aspx')
+	time.sleep(20)
 
 
 
